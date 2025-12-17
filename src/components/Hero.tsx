@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cream via-background to-jade/10" />
+      {/* Background Elements (section-only background color override) */}
+      <div className="absolute inset-0 bg-[#fdf7eb]" />
       <div className="absolute inset-0 bg-grain pointer-events-none" />
       
       {/* Decorative Shapes */}
@@ -22,9 +22,11 @@ const Hero = () => {
       }} />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8 animate-fade-up opacity-0">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+          {/* Left: Text */}
+          <div className="lg:w-1/2 text-left">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8 animate-fade-up opacity-0">
             <Zap className="w-4 h-4" />
             Automações Empresariais Inteligentes
           </div>
@@ -75,6 +77,13 @@ const Hero = () => {
               </div>
               <span className="text-sm text-muted-foreground">Equipes Capacitadas</span>
             </div>
+          </div>
+
+          </div>
+
+          {/* Right: Image */}
+          <div className="lg:w-1/2 flex justify-end">
+            <img src="/src/assets/AlineAuten.png" alt="Aline Auten" className="w-80 max-w-full object-contain" />
           </div>
 
           {/* Scroll Indicator */}

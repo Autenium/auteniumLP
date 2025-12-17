@@ -5,8 +5,8 @@ const Footer = () => {
 
   const links = {
     solucoes: ["Chatbot com IA", "Assistente Virtual Pro", "Projetos Personalizados"],
-    empresa: ["Sobre Nós", "Como Funciona", "Blog", "Carreiras"],
-    suporte: ["Contato", "FAQ", "Documentação", "Status"],
+    empresa: ["Sobre Nós", "Como Funciona"],
+    suporte: ["Contato", "FAQ"],
   };
 
   return (
@@ -21,7 +21,8 @@ const Footer = () => {
               <img 
                 src={logoAutenium} 
                 alt="Autenium Logo" 
-                className="h-16 w-auto group-hover:scale-105 transition-transform mix-blend-multiply"
+                className="h-16 w-auto transition-transform group-hover:scale-105"
+                style={{ filter: 'brightness(1)' }}
               />
             </div>
             <p className="text-primary-foreground/70 leading-relaxed mb-4 max-w-sm">
