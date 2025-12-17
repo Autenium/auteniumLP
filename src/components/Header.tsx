@@ -50,9 +50,9 @@ const Header = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="outline" size="sm">
-            Fale Conosco
-          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <a href="#contato">Fale Conosco</a>
+          </Button> 
         </nav>
 
         {/* Mobile Menu Button */}
@@ -82,8 +82,8 @@ const Header = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="outline" className="mt-2">
-            Fale Conosco
+          <Button variant="outline" className="mt-2" asChild>
+            <a href="#contato">Fale Conosco</a>
           </Button>
         </nav>
       </div>
