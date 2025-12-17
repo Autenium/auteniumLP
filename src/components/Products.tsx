@@ -84,7 +84,7 @@ const Products = () => {
     {
       title: "Chatbot com IA",
       description: "Atendimento automatizado inteligente para seu negócio. Respostas rápidas e personalizadas 24/7.",
-      price: "R$ 799",
+      price: "R$ 799,90",
       icon: Bot,
       features: [
         "IA conversacional avançada",
@@ -97,7 +97,7 @@ const Products = () => {
     {
       title: "Assistente Virtual Pro",
       description: "Chatbot completo com integrações Google. Automatize tarefas e libere sua equipe para o estratégico.",
-      price: "R$ 1.099",
+      price: "R$ 1.099,90",
       icon: Sparkles,
       highlighted: true,
       features: [
@@ -112,7 +112,7 @@ const Products = () => {
     {
       title: "Projeto Personalizado",
       description: "Soluções sob medida para desafios únicos. Analisamos seu processo e criamos a automação ideal.",
-      price: "R$ 990",
+      price: "R$ 990,90",
       icon: Wrench,
       features: [
         "Análise completa do processo",
