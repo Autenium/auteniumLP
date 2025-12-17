@@ -21,7 +21,7 @@ const Footer = () => {
               <img 
                 src={logoAutenium} 
                 alt="Autenium Logo" 
-                className="h-12 w-auto group-hover:scale-105 transition-transform mix-blend-multiply"
+                className="h-16 w-auto group-hover:scale-105 transition-transform mix-blend-multiply"
               />
             </div>
             <p className="text-primary-foreground/70 leading-relaxed mb-4 max-w-sm">
