@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
           {/* Left: Text */}
-          <div className="lg:w-1/2 text-left pt-12 lg:pt-20">
+          <div className="lg:w-1/2 text-left pt-6 lg:pt-10">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8 animate-fade-up opacity-0">
             <Zap className="w-4 h-4" />
@@ -56,27 +56,28 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mt-16 animate-fade-up opacity-0 delay-400">
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-primary mb-1">
+            <div className="flex flex-wrap items-start gap-6 md:gap-12 mt-8 animate-fade-up opacity-0 delay-400">
+              <div className="text-left flex items-center gap-3">
+                <div className="flex items-center gap-2 text-primary">
                 <Bot className="w-5 h-5" />
                 <span className="font-display text-3xl font-medium">IA</span>
               </div>
-              <span className="text-sm text-muted-foreground">Chatbots Inteligentes</span>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-primary mb-1">
+                <span className="text-sm text-muted-foreground">Chatbots Inteligentes</span>
+              </div>
+              <div className="text-left flex items-center gap-3">
+                <div className="flex items-center gap-2 text-primary">
                 <Zap className="w-5 h-5" />
                 <span className="font-display text-3xl font-medium">100%</span>
               </div>
-              <span className="text-sm text-muted-foreground">Processos Otimizados</span>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 text-primary mb-1">
+                <span className="text-sm text-muted-foreground">Processos Otimizados</span>
+              </div>
+              <div className="text-left flex items-center gap-3">
+                <div className="flex items-center gap-2 text-primary">
                 <Users className="w-5 h-5" />
                 <span className="font-display text-3xl font-medium">+</span>
               </div>
-              <span className="text-sm text-muted-foreground">Equipes Capacitadas</span>
+                <span className="text-sm text-muted-foreground">Equipes Capacitadas</span>
+              </div>
             </div>
           </div>
 

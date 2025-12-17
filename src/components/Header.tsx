@@ -17,7 +17,7 @@ const Header = () => {
 
   const navLinks = [
     { href: "#inicio", label: "Início" },
-    { href: "#produtos", label: "Produtos" },
+    { href: "#solucoes", label: "Produtos" },
     { href: "#sobre", label: "Sobre" },
     { href: "#contato", label: "Contato" },
   ];
@@ -50,7 +50,7 @@ const Header = () => {
             <img 
               src={logoAutenium} 
               alt="Autenium Logo" 
-              className={`transition-transform ${isScrolled ? 'h-8' : 'h-16'} group-hover:scale-105`}
+              className={`transition-transform ${isScrolled ? 'h-10' : 'h-16'} group-hover:scale-105`}
             />
           </div>
         </a>
