@@ -32,11 +32,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 group">
-          <img 
-            src={logoAutenium} 
-            alt="Autenium Logo" 
-            className={`h-16 w-auto group-hover:scale-105 transition-transform mix-blend-multiply ${isScrolled ? 'p-2 rounded bg-background/90' : ''}`}
-          />
+          <div className={`p-2 rounded ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'}`}>
+            <img 
+              src={logoAutenium} 
+              alt="Autenium Logo" 
+              className="h-16 w-auto group-hover:scale-105 transition-transform mix-blend-multiply"
+            />
+          </div>
         </a>
 
         {/* Desktop Navigation */}
