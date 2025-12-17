@@ -81,8 +81,6 @@ const Hero = () => {
             </div>
           </div>
 
-          </div>
-
           {/* Right: Image (fill the box) */}
           <div className="lg:w-1/2 flex justify-end items-center">
             <div className="w-full max-w-lg lg:max-w-xl h-[420px] lg:h-[520px] rounded-2xl overflow-hidden shadow-lg">
