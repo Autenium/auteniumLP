@@ -1,3 +1,5 @@
+import logoAutenium from "@/assets/logo-autenium.jpeg";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -15,13 +17,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display text-xl font-semibold">
-                A
-              </div>
-              <span className="font-display text-2xl font-medium tracking-tight">
-                Autenium
-              </span>
+            <div className="flex items-center gap-2 mb-6">
+              <img 
+                src={logoAutenium} 
+                alt="Autenium Logo" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-primary-foreground/70 leading-relaxed mb-6 max-w-sm">
               Autenticidade em cada detalhe. Produtos premium selecionados 
