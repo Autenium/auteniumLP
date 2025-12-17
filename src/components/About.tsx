@@ -84,8 +84,8 @@ const About = () => {
             {steps.map((step, index) => (
               <div key={step.number} className="flex items-center w-full animate-fade-up opacity-0" style={{ animationDelay: `${500 + index * 100}ms` }}>
                 <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded bg-jade/10 flex items-center justify-center border border-jade/20">
-                    <span className="font-display text-2xl text-primary/20 font-medium">{step.number}</span>
+                  <div className="w-24 h-24 rounded-lg bg-card flex items-center justify-center border border-primary/10 shadow-soft">
+                    <span className="font-display text-3xl text-primary font-semibold tracking-wide">{step.number}</span>
                   </div>
                 </div>
 
