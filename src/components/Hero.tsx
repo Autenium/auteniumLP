@@ -55,30 +55,34 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Stats */}
-            <div className="flex flex-wrap items-start gap-6 md:gap-12 mt-8 animate-fade-up opacity-0 delay-400">
-              <div className="text-left flex items-center gap-3">
-                <div className="flex items-center gap-2 text-primary">
+          {/* Stats — grid so the third item centers below the first two */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 animate-fade-up opacity-0 delay-400">
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 text-primary">
                 <Bot className="w-5 h-5" />
                 <span className="font-display text-3xl font-medium">IA</span>
               </div>
-                <span className="text-sm text-muted-foreground">Chatbots Inteligentes</span>
-              </div>
-              <div className="text-left flex items-center gap-3">
-                <div className="flex items-center gap-2 text-primary">
+              <span className="text-sm text-muted-foreground">Chatbots Inteligentes</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 text-primary">
                 <Zap className="w-5 h-5" />
                 <span className="font-display text-3xl font-medium">100%</span>
               </div>
-                <span className="text-sm text-muted-foreground">Processos Otimizados</span>
-              </div>
-              <div className="text-left flex items-center gap-3">
+              <span className="text-sm text-muted-foreground">Processos Otimizados</span>
+            </div>
+
+            <div className="md:col-span-2 flex justify-center">
+              <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2 text-primary">
-                <Users className="w-5 h-5" />
-                <span className="font-display text-3xl font-medium">+</span>
-              </div>
+                  <Users className="w-5 h-5" />
+                  <span className="font-display text-3xl font-medium">+</span>
+                </div>
                 <span className="text-sm text-muted-foreground">Equipes Capacitadas</span>
               </div>
             </div>
+          </div>
           </div>
 
           {/* Right: Image (fill the box) */}
