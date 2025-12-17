@@ -22,15 +22,15 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "contato@autenium.com" },
-    { icon: Phone, label: "WhatsApp", value: "+55 (11) 99999-9999" },
-    { icon: MapPin, label: "Localização", value: "Brasil - Atendimento Remoto" },
+    { icon: Mail, label: "Email", value: "autenium@gmail.com", href: "mailto:autenium@gmail.com" },
+    { icon: Phone, label: "WhatsApp", value: "+55 (19) 99254-6004", href: "https://api.whatsapp.com/send?phone=5519992546004&text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es" },
+    { icon: MapPin, label: "Localização", value: "Brasil - Atendimento Remoto", href: "https://www.google.com/maps/search/?api=1&query=Brasil+Atendimento+Remoto" },
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: MessageCircle, href: "#", label: "WhatsApp" },
+    { icon: Instagram, href: "https://www.instagram.com/autenium/", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/autenium/?viewAsMember=true", label: "LinkedIn" },
+    { icon: MessageCircle, href: "https://api.whatsapp.com/send?phone=5519992546004&text=Olá%21+Gostaria+de+solicitar+um+orçamento%21", label: "WhatsApp" },
   ];
 
   return (
@@ -69,7 +69,18 @@ const Contact = () => {
                     <span className="text-xs tracking-widest uppercase text-muted-foreground block">
                       {item.label}
                     </span>
-                    <span className="text-foreground font-medium">{item.value}</span>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-foreground font-medium hover:text-primary transition-colors"
+                        target={/^https?:\/\//.test(item.href) ? "_blank" : undefined}
+                        rel={/^https?:\/\//.test(item.href) ? "noopener noreferrer" : undefined}
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <span className="text-foreground font-medium">{item.value}</span>
+                    )}
                   </div>
                 </div>
               ))}
