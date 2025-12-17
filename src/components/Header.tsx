@@ -35,7 +35,7 @@ const Header = () => {
           <img 
             src={logoAutenium} 
             alt="Autenium Logo" 
-            className="h-12 w-auto group-hover:scale-105 transition-transform"
+            className="h-12 w-auto group-hover:scale-105 transition-transform mix-blend-multiply"
           />
         </a>
 
