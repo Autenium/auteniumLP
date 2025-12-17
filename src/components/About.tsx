@@ -88,11 +88,11 @@ const About = () => {
               >
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-14 left-0 right-0 h-[2px] z-0 bg-gradient-to-r from-primary/30 to-transparent" />
+                  <div className="hidden md:block absolute top-20 left-0 right-0 h-[2px] z-0 bg-gradient-to-r from-primary/30 to-transparent" />
                 )}
                 
                 <div className="relative z-10">
-                  <span className="font-display text-5xl text-primary/20 font-medium block mb-6 relative inline-block bg-jade/10 px-4 py-2 z-20">
+                  <span className="font-display text-5xl text-primary/20 font-medium block mb-8 relative inline-block bg-jade/10 px-5 py-3 z-50">
                     {step.number}
                   </span>
                   <h4 className="font-display text-xl text-foreground mb-2">{step.title}</h4>

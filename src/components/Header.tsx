@@ -26,13 +26,13 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft py-4"
+          ? "bg-[#ebe1d5] backdrop-blur-sm shadow-soft py-4"
           : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 group">
-          <div className={`p-2 rounded ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'}`}>
+          <div className={`p-2 rounded ${isScrolled ? 'bg-[#ebe1d5] shadow-soft' : 'bg-transparent'}`}>
             <img 
               src={logoAutenium} 
               alt="Autenium Logo" 
