@@ -95,6 +95,8 @@ const About = () => {
                   <span className="font-display text-5xl text-primary/20 font-medium block mb-8 relative inline-block bg-jade/10 px-5 py-3 z-50">
                     {step.number}
                   </span>
+                  {/* Small badge underline so even the last item shows a short line */}
+                  <div className="mt-2 h-[3px] w-36 bg-primary/30 rounded" />
                   <h4 className="font-display text-xl text-foreground mb-2">{step.title}</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
                 </div>

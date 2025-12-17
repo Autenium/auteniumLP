@@ -32,11 +32,11 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 group">
-          <div className={`p-2 rounded ${isScrolled ? 'bg-[#ebe1d5] shadow-soft' : 'bg-transparent'}`}>
+          <div className={`transition-all flex items-center justify-center ${isScrolled ? 'w-14 h-14 rounded-full bg-[#ebe1d5] shadow-soft border border-primary/10' : ''}`}>
             <img 
               src={logoAutenium} 
               alt="Autenium Logo" 
-              className="h-16 w-auto group-hover:scale-105 transition-transform mix-blend-multiply"
+              className={`transition-transform mix-blend-multiply ${isScrolled ? 'h-8' : 'h-16'} group-hover:scale-105`}
             />
           </div>
         </a>
