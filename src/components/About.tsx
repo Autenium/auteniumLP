@@ -79,27 +79,29 @@ const About = () => {
             Como <span className="italic text-primary">trabalhamos</span>
           </h3>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          {/* Desktop: badges row with connectors */}
+          <div className="hidden md:flex items-center gap-4 mb-8">
             {steps.map((step, index) => (
-              <div
-                key={step.number}
-                className="relative animate-fade-up opacity-0"
-                style={{ animationDelay: `${500 + index * 100}ms` }}
-              >
-                {/* Connector Line */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-20 left-0 right-0 h-[2px] z-0 bg-gradient-to-r from-primary/30 to-transparent" />
-                )}
-                
-                <div className="relative z-10">
-                  <span className="font-display text-5xl text-primary/20 font-medium block mb-8 relative inline-block bg-jade/10 px-5 py-3 z-50">
-                    {step.number}
-                  </span>
-                  {/* Small badge underline so even the last item shows a short line */}
-                  <div className="mt-2 h-[3px] w-36 bg-primary/30 rounded" />
-                  <h4 className="font-display text-xl text-foreground mb-2">{step.title}</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+              <div key={step.number} className="flex items-center w-full animate-fade-up opacity-0" style={{ animationDelay: `${500 + index * 100}ms` }}>
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded bg-jade/10 flex items-center justify-center border border-jade/20">
+                    <span className="font-display text-2xl text-primary/20 font-medium">{step.number}</span>
+                  </div>
                 </div>
+
+                {index < steps.length - 1 && (
+                  <div className="flex-1 h-[6px] bg-primary/30 mx-4 rounded" />
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Titles & descriptions (grid under badges) */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div key={step.number} className="animate-fade-up opacity-0" style={{ animationDelay: `${600 + index * 100}ms` }}>
+                <h4 className="font-display text-xl text-foreground mb-2">{step.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
