@@ -1,5 +1,6 @@
 import { ArrowDown, Bot, Zap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AlineAuten from "@/assets/AlineAuten.png";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
           {/* Left: Text */}
-          <div className="lg:w-1/2 text-left">
+          <div className="lg:w-1/2 text-left pt-12 lg:pt-20">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8 animate-fade-up opacity-0">
             <Zap className="w-4 h-4" />
@@ -81,9 +82,11 @@ const Hero = () => {
 
           </div>
 
-          {/* Right: Image */}
-          <div className="lg:w-1/2 flex justify-end">
-            <img src="/src/assets/AlineAuten.png" alt="Aline Auten" className="w-80 max-w-full object-contain" />
+          {/* Right: Image (fill the box) */}
+          <div className="lg:w-1/2 flex justify-end items-center">
+            <div className="w-full max-w-lg lg:max-w-xl h-[420px] lg:h-[520px] rounded-2xl overflow-hidden shadow-lg">
+              <img src={AlineAuten} alt="Aline Auten" className="w-full h-full object-cover" />
+            </div>
           </div>
 
           {/* Scroll Indicator */}

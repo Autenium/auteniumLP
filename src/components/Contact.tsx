@@ -14,9 +14,20 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Build WhatsApp message and open chat
+    const phone = "5519992546004"; // company number in international format
+    const parts = [];
+    if (formData.name) parts.push(`Nome: ${formData.name}`);
+    if (formData.email) parts.push(`Email: ${formData.email}`);
+    if (formData.company) parts.push(`Empresa: ${formData.company}`);
+    if (formData.message) parts.push(`Mensagem: ${formData.message}`);
+    const message = `Olá! Tenho interesse. ${parts.join(' | ')}`;
+    const encoded = encodeURIComponent(message);
+    const url = `https://wa.me/${phone}?text=${encoded}`;
+    window.open(url, "_blank");
     toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em até 24 horas.",
+      title: "Abrindo WhatsApp",
+      description: "Sua mensagem será aberta no WhatsApp para confirmação e envio.",
     });
     setFormData({ name: "", email: "", company: "", message: "" });
   };
