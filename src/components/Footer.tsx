@@ -4,9 +4,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const links = {
-    produtos: ["Fragrâncias", "Skincare", "Acessórios", "Especiais"],
-    empresa: ["Sobre Nós", "Nossa História", "Sustentabilidade", "Carreiras"],
-    suporte: ["Contato", "FAQ", "Envio", "Devoluções"],
+    solucoes: ["Chatbot com IA", "Assistente Virtual Pro", "Projetos Personalizados"],
+    empresa: ["Sobre Nós", "Como Funciona", "Blog", "Carreiras"],
+    suporte: ["Contato", "FAQ", "Documentação", "Status"],
   };
 
   return (
@@ -24,21 +24,24 @@ const Footer = () => {
                 className="h-12 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-primary-foreground/70 leading-relaxed mb-6 max-w-sm">
-              Autenticidade em cada detalhe. Produtos premium selecionados 
-              para quem valoriza qualidade e design atemporal.
+            <p className="text-primary-foreground/70 leading-relaxed mb-4 max-w-sm">
+              Mais que processos. Pessoas preparadas. Automatizamos com propósito 
+              e ensinamos com estratégia.
+            </p>
+            <p className="text-jade font-display text-lg italic">
+              "Tecnologia que entende pessoas."
             </p>
           </div>
 
-          {/* Products */}
+          {/* Solutions */}
           <div>
-            <h4 className="font-display text-lg mb-4">Produtos</h4>
+            <h4 className="font-display text-lg mb-4">Soluções</h4>
             <ul className="space-y-3">
-              {links.produtos.map((link) => (
+              {links.solucoes.map((link) => (
                 <li key={link}>
                   <a
-                    href="#produtos"
-                    className="text-primary-foreground/70 hover:text-primary transition-colors text-sm"
+                    href="#solucoes"
+                    className="text-primary-foreground/70 hover:text-jade transition-colors text-sm"
                   >
                     {link}
                   </a>
@@ -55,7 +58,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href="#sobre"
-                    className="text-primary-foreground/70 hover:text-primary transition-colors text-sm"
+                    className="text-primary-foreground/70 hover:text-jade transition-colors text-sm"
                   >
                     {link}
                   </a>
@@ -72,7 +75,7 @@ const Footer = () => {
                 <li key={link}>
                   <a
                     href="#contato"
-                    className="text-primary-foreground/70 hover:text-primary transition-colors text-sm"
+                    className="text-primary-foreground/70 hover:text-jade transition-colors text-sm"
                   >
                     {link}
                   </a>
@@ -88,10 +91,10 @@ const Footer = () => {
             © {currentYear} Autenium. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-primary-foreground/50 hover:text-primary transition-colors text-sm">
+            <a href="#" className="text-primary-foreground/50 hover:text-jade transition-colors text-sm">
               Termos de Uso
             </a>
-            <a href="#" className="text-primary-foreground/50 hover:text-primary transition-colors text-sm">
+            <a href="#" className="text-primary-foreground/50 hover:text-jade transition-colors text-sm">
               Privacidade
             </a>
           </div>

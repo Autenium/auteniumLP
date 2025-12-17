@@ -1,27 +1,34 @@
-import { Leaf, Award, Heart, Recycle } from "lucide-react";
+import { Target, BookOpen, Cog, Users } from "lucide-react";
 
 const About = () => {
   const features = [
     {
-      icon: Leaf,
-      title: "100% Natural",
-      description: "Ingredientes selecionados diretamente da natureza",
+      icon: Cog,
+      title: "Automação Inteligente",
+      description: "Processos otimizados com IA de última geração",
     },
     {
-      icon: Award,
-      title: "Qualidade Premium",
-      description: "Certificações internacionais de excelência",
+      icon: BookOpen,
+      title: "Capacitação",
+      description: "Sua equipe aprende a dominar cada ferramenta",
     },
     {
-      icon: Heart,
-      title: "Feito com Amor",
-      description: "Cada produto é criado com dedicação artesanal",
+      icon: Target,
+      title: "Propósito",
+      description: "Soluções alinhadas aos objetivos do seu negócio",
     },
     {
-      icon: Recycle,
-      title: "Sustentável",
-      description: "Comprometidos com o meio ambiente",
+      icon: Users,
+      title: "Parceria",
+      description: "Acompanhamento contínuo e suporte dedicado",
     },
+  ];
+
+  const steps = [
+    { number: "01", title: "Diagnóstico", description: "Analisamos seus processos e identificamos oportunidades" },
+    { number: "02", title: "Desenvolvimento", description: "Criamos a automação personalizada para sua necessidade" },
+    { number: "03", title: "Implementação", description: "Configuramos e integramos em seu ambiente" },
+    { number: "04", title: "Capacitação", description: "Treinamos sua equipe para autonomia total" },
   ];
 
   return (
@@ -33,61 +40,75 @@ const About = () => {
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-jade/20 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image Side */}
-          <div className="relative animate-fade-up opacity-0">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
-              <img
-                src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=1000&fit=crop"
-                alt="Nossa história"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Floating Card */}
-            <div className="absolute -bottom-8 -right-8 bg-card p-6 rounded-2xl shadow-elevated max-w-[200px]">
-              <span className="font-display text-5xl text-primary font-medium">10+</span>
-              <p className="text-muted-foreground text-sm mt-1">Anos de experiência no mercado</p>
-            </div>
-          </div>
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <span className="text-sm tracking-widest uppercase text-primary mb-4 block animate-fade-up opacity-0">
+            Por que a Autenium?
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6 animate-fade-up opacity-0 delay-100">
+            Automação com propósito,
+            <br />
+            <span className="italic text-primary">ensino com estratégia</span>
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed animate-fade-up opacity-0 delay-200">
+            Não entregamos apenas ferramentas. Entregamos transformação. Cada automação 
+            vem acompanhada de capacitação para que sua equipe tenha autonomia real.
+          </p>
+        </div>
 
-          {/* Content Side */}
-          <div>
-            <span className="text-sm tracking-widest uppercase text-primary mb-4 block animate-fade-up opacity-0">
-              Sobre Nós
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6 animate-fade-up opacity-0 delay-100">
-              Autenticidade é nossa
-              <br />
-              <span className="italic text-primary">essência</span>
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 animate-fade-up opacity-0 delay-200">
-              Na Autenium, acreditamos que cada produto deve contar uma história. 
-              Nossa missão é trazer até você produtos que combinam a pureza da 
-              natureza com a sofisticação do design contemporâneo.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-10 animate-fade-up opacity-0 delay-300">
-              Fundada com a visão de criar experiências autênticas, nossa empresa 
-              se destaca pela curadoria meticulosa de cada item em nosso catálogo, 
-              garantindo qualidade excepcional em cada detalhe.
-            </p>
+        {/* Features Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
+          {features.map((feature, index) => (
+            <div
+              key={feature.title}
+              className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm animate-fade-up opacity-0"
+              style={{ animationDelay: `${300 + index * 100}ms` }}
+            >
+              <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="font-display text-lg text-foreground mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={feature.title}
-                  className="animate-fade-up opacity-0"
-                  style={{ animationDelay: `${400 + index * 100}ms` }}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-display text-lg text-foreground mb-1">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
+        {/* Process Steps */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="font-display text-3xl text-foreground text-center mb-12 animate-fade-up opacity-0">
+            Como <span className="italic text-primary">trabalhamos</span>
+          </h3>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div
+                key={step.number}
+                className="relative animate-fade-up opacity-0"
+                style={{ animationDelay: `${500 + index * 100}ms` }}
+              >
+                {/* Connector Line */}
+                {index < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gradient-to-r from-primary/30 to-transparent" />
+                )}
+                
+                <div className="relative z-10">
+                  <span className="font-display text-5xl text-primary/20 font-medium block mb-2">
+                    {step.number}
+                  </span>
+                  <h4 className="font-display text-xl text-foreground mb-2">{step.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Quote */}
+        <div className="max-w-2xl mx-auto text-center mt-20 animate-fade-up opacity-0 delay-500">
+          <blockquote className="font-display text-2xl md:text-3xl text-foreground italic leading-relaxed">
+            "Tecnologia que entende pessoas. Automação que liberta potencial."
+          </blockquote>
+          <p className="text-primary mt-4 font-medium">— Equipe Autenium</p>
         </div>
       </div>
     </section>

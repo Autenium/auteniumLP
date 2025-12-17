@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -8,6 +8,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
     message: "",
   });
 
@@ -15,21 +16,21 @@ const Contact = () => {
     e.preventDefault();
     toast({
       title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
+      description: "Entraremos em contato em até 24 horas.",
     });
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", company: "", message: "" });
   };
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "contato@autenium.com" },
-    { icon: Phone, label: "Telefone", value: "+55 (11) 99999-9999" },
-    { icon: MapPin, label: "Endereço", value: "São Paulo, SP - Brasil" },
+    { icon: Phone, label: "WhatsApp", value: "+55 (11) 99999-9999" },
+    { icon: MapPin, label: "Localização", value: "Brasil - Atendimento Remoto" },
   ];
 
   const socialLinks = [
     { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: MessageCircle, href: "#", label: "WhatsApp" },
   ];
 
   return (
@@ -41,16 +42,16 @@ const Contact = () => {
           {/* Contact Info */}
           <div>
             <span className="text-sm tracking-widest uppercase text-primary mb-4 block animate-fade-up opacity-0">
-              Contato
+              Vamos Conversar
             </span>
             <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6 animate-fade-up opacity-0 delay-100">
-              Vamos conversar
+              Pronto para
               <br />
-              <span className="italic text-primary">sobre seu projeto</span>
+              <span className="italic text-primary">automatizar?</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10 animate-fade-up opacity-0 delay-200">
-              Estamos sempre prontos para ouvir você. Entre em contato para 
-              descobrir como podemos ajudar a transformar suas ideias em realidade.
+              Agende uma consultoria gratuita. Vamos entender seu negócio e 
+              mostrar como a automação pode transformar seus resultados.
             </p>
 
             {/* Contact Details */}
@@ -95,7 +96,10 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="bg-card p-8 md:p-10 rounded-3xl shadow-soft"
             >
-              <div className="space-y-6">
+              <h3 className="font-display text-2xl text-foreground mb-6">
+                Solicite uma proposta
+              </h3>
+              <div className="space-y-5">
                 <div>
                   <label
                     htmlFor="name"
@@ -111,7 +115,7 @@ const Contact = () => {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                    placeholder="Seu nome completo"
+                    placeholder="Seu nome"
                     required
                   />
                 </div>
@@ -136,10 +140,28 @@ const Contact = () => {
                 </div>
                 <div>
                   <label
+                    htmlFor="company"
+                    className="text-sm font-medium text-foreground mb-2 block"
+                  >
+                    Empresa
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    value={formData.company}
+                    onChange={(e) =>
+                      setFormData({ ...formData, company: e.target.value })
+                    }
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                    placeholder="Nome da empresa"
+                  />
+                </div>
+                <div>
+                  <label
                     htmlFor="message"
                     className="text-sm font-medium text-foreground mb-2 block"
                   >
-                    Mensagem
+                    Qual seu desafio?
                   </label>
                   <textarea
                     id="message"
@@ -147,9 +169,9 @@ const Contact = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    rows={5}
+                    rows={4}
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"
-                    placeholder="Como podemos ajudar?"
+                    placeholder="Descreva o processo que deseja automatizar..."
                     required
                   />
                 </div>
